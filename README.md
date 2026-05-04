@@ -16,6 +16,9 @@ Tool definitions, MCP server scaffolding, and composition patterns for letting a
 ### 🔁 [agent-eval-loop](https://github.com/ivaylogb/agent-eval-loop)
 A layered eval framework — unit-style checks, simulated trajectories, and live shadow evaluation — for catching agent regressions before they ship.
 
+### 🔁 [agent-skill-kit](https://github.com/ivaylogb/agent-skill-kit)
+Methodology and Claude Code skills for shipping production-grade agents. Reference agent, audit skills, and a meta-agent that scaffolds new agents from a description.
+
 ---
 
 ## Applied product
