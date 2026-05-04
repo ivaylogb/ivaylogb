@@ -1,6 +1,6 @@
 # Ivaylo Bahtchevanov
 
-This page is where I keep the things I'm building on the side. Includes engineering primitives and applied products 
+This page is where I keep the things I'm building on the side for fun. It includes agent tools that have been useful for me in the past, engineering primitives, and fun product ideas I'm willing to make public. 
 ---
 
 ## Agent engineering kit
@@ -24,6 +24,6 @@ Methodology and Claude Code skills for shipping production-grade agents. Referen
 ## Applied product
 
 ### 🏠 [costseg-pro](https://github.com/ivaylogb/costseg-pro)
-A cost-segregation tool for real estate investors, built end-to-end on Vite, React, and Vercel. Started as an excuse to keep my hands in the vibe-coding loop; turned into something I and a few friends actually use.
+A cost-segregation tool for real estate investors, built end-to-end on Vite, React, and Vercel. Started as an excuse to keep my hands in the vibe-coding loop; turned into something my real estate friends use.
 
 ---
