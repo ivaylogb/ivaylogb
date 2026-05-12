@@ -21,9 +21,12 @@ Methodology and Claude Code skills for shipping production-grade agents. Referen
 
 ---
 
-## Applied product
+## Personal Products
 
 ### 🏠 [costseg-pro](https://github.com/ivaylogb/costseg-pro)
-A cost-segregation tool for real estate investors, built end-to-end on Vite, React, and Vercel. Started as an excuse to keep my hands in the vibe-coding loop; turned into something my real estate friends use.
+A cost-segregation tool for real estate investors, built end-to-end on Vite, React, and Vercel. Started as an excuse to dabble more in real estate, now used by a handful of active investors.
+
+
+
 
 ---
