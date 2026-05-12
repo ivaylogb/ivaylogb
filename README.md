@@ -26,7 +26,7 @@ Methodology and Claude Code skills for shipping production-grade agents. Referen
 ### 🏠 [costseg-pro](https://github.com/ivaylogb/costseg-pro)
 A cost-segregation tool for real estate investors, built end-to-end on Vite, React, and Vercel. Started as an excuse to dabble more in real estate, now used by a handful of active investors.
 
-### [https://github.com/ivaylogb/personal-portfolio-manager-and-researcher]
+### [Portfolio-investing-assistant](https://github.com/ivaylogb/personal-portfolio-manager-and-researcher)
 Personal portfolio monitoring + AI-assisted equity research framework. Daily briefs, SEC alerts, user-defined rules engine, methodology skills for thesis exploration. Not financial advice.
 
 ---
