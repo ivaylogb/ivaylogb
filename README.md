@@ -1,7 +1,7 @@
-## Ivaylo Bahtchevanov
+# Ivaylo Bahtchevanov
 
 ---
-### This page is where I keep the things I'm building on the side for fun. It includes agent tools that have been useful for me in the past, engineering primitives, and fun product ideas I'm willing to make public. 
+This page is where I keep the things I'm building on the side for fun. It includes agent tools that have been useful for me in the past, engineering primitives, and fun product ideas I'm willing to make public. 
 ---
 ## Agent engineering kit
 
