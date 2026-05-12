@@ -30,5 +30,6 @@ A cost-segregation tool for real estate investors, built end-to-end on Vite, Rea
 Personal portfolio monitoring + AI-assisted equity research framework. Daily briefs, SEC alerts, user-defined rules engine, methodology skills for thesis exploration. Not financial advice.
 
 ### [Selah](https://sela-blond.vercel.app/)
-Philosophical and spiritual meditative partner
+Philosophical and spiritual meditative partner.
+
 ---
