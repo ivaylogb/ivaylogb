@@ -1,8 +1,8 @@
 # Ivaylo Bahtchevanov
 
+---
 This page is where I keep the things I'm building on the side for fun. It includes agent tools that have been useful for me in the past, engineering primitives, and fun product ideas I'm willing to make public. 
 ---
-
 ## Agent engineering kit
 
 A working hypothesis: production-grade agents stand on three legs — **context, tools, and evals** — and most of the interesting product work in the next few years is in the abstractions across them. These three repos are my own scratch pad for that.
@@ -26,7 +26,7 @@ Methodology and Claude Code skills for shipping production-grade agents. Referen
 ### 🏠 [costseg-pro](https://github.com/ivaylogb/costseg-pro)
 A cost-segregation tool for real estate investors, built end-to-end on Vite, React, and Vercel. Started as an excuse to dabble more in real estate, now used by a handful of active investors.
 
-
-
+### [https://github.com/ivaylogb/personal-portfolio-manager-and-researcher]
+Personal portfolio monitoring + AI-assisted equity research framework. Daily briefs, SEC alerts, user-defined rules engine, methodology skills for thesis exploration. Not financial advice.
 
 ---
