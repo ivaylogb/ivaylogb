@@ -57,7 +57,7 @@ Uses the abstractions from `agent-engineering`. The worked example in `examples/
 
 ### 📉 [funnel-researcher](https://github.com/ivaylogb/funnel-researcher)
 A failure-diagnosis tool for developer-API activation funnels. Reads the funnel definition, dropoff data, and the product's artifacts (docs, SDK, error catalog), produces 2-3 structured hypotheses about why developers drop off at a target step, with `file:line` evidence and applyable structured edit specs. Built for growth/PLG PMs running developer-facing API products and agent platforms.
-Currently ships the `diagnose` subcommand; the same three-stage shape as agent-researcher (`diagnose`, `apply`, `iterate`) is the build target as the methodology is validated in this domain.
+Three subcommands — `diagnose`, `apply`, `iterate` — that take a product surface from hypothesis through applied edits to a side-by-side comparison, without leaving the artifact.
 Same methodology as agent-researcher, applied to a different problem class. The worked example diagnoses a fictional agentic-API product against a realistic dropoff cohort; 9 of 9 file:line citations in the produced report verified against the fixture source.
 
 ---
