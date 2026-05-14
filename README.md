@@ -47,6 +47,15 @@ Methodology and Claude Code skills for shipping production-grade agents. Referen
 
 ---
 
+## Built on the kit
+
+### 🔬 [agent-researcher](https://github.com/ivaylogb/agent-researcher)
+A failure-diagnosis agent for other agents. When a target agent fails an eval, this reads the failing scenario and the target agent's source, produces a small set of structured hypotheses categorized against the four-layer model, applies one mechanically, and re-runs the eval to measure the delta. Three subcommands — `diagnose`, `apply`, `iterate` — that close the loop from hypothesis to measured outcome.
+
+Uses the four-layer model from agent-engineering as its diagnostic vocabulary. The worked example in `examples/issue_107/` runs the full flow against reference_agent's routing eval, including a comparison run where one hypothesis (Layer 3 framing) was confirmed by the eval and another (Layer 1 framing) was falsified.
+
+---
+
 ## Personal Products
 
 ### 🏠 [costseg-pro](https://github.com/ivaylogb/costseg-pro)
