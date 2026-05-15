@@ -2,8 +2,9 @@
 
 This page is where I keep the things I'm building on the side. It includes agent tools that have been useful for me in the past, engineering primitives, agent engineering methodology, diagnostic tools, and fun product ideas and musings.
 
-Production-engineering for LLM-mediated systems has two pieces of work - (1) Agent Engineering Kit focused on context, tools, eval, skills methodology and reusable patterns, (2) diagnosing them when they don't work (three reference tools, an orchestrator, and a spec
-to make LLM-failure analysis typed, falsifiable, with findings that are easy to operationalize.
+Production-engineering for LLM-mediated systems has two pieces of work: 
+(1) Agent Engineering Kit focused on context, tools, eval, skills methodology and reusable patterns
+(2) Diagnostic Tools built for when agentic systems don't work (three reference tools, an orchestrator, and a spec to make LLM-failure analysis typed, falsifiable, with findings that are easy to operationalize.
 
 ## Agent engineering kit
 
