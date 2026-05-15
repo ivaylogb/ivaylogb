@@ -1,7 +1,6 @@
 ## Ivaylo Bahtchevanov 
 
-This page is where I keep the things I'm building on the side for fun. It includes agent tools that have been useful for me in the past, engineering primitives, and fun product ideas I'm willing to make public. 
-
+This page is where I keep the things I'm building on the side. It includes agent tools that have been useful for me in the past, engineering primitives, agent engineering methodology, diagnostic tools, and fun product ideas and musings.
 
 ## Agent engineering kit
 
@@ -48,6 +47,15 @@ Methodology and Claude Code skills for shipping production-grade agents. Referen
 
 ---
 
+## Diagnostic spec
+
+### 📐 [agent-diagnosis-spec](https://github.com/ivaylogb/agent-diagnosis-spec)
+
+Agent diagnosis tools and verifications using custom primitives. 
+
+
+---
+
 ## Built on the kit
 
 ### 🔬 [agent-researcher](https://github.com/ivaylogb/agent-researcher)
@@ -62,14 +70,12 @@ Three subcommands (`diagnose`, `apply`, `iterate`) give out-of-the-box functiona
 Same methodology as agent-researcher. The worked example diagnoses a fictional agentic-API product against a realistic dropoff cohort.
 
 ### 📡 [integration-watcher](https://github.com/ivaylogb/integration-watcher)
-A pattern-finding tool for developer integrations against a third-party API.  a stream of API-call traces from a cohort of developer integrations, a watch question, and the product's artifacts, produces structured findings about where integrations get stuck, what developers aren't using, and what they're using wrong. 
-Three subcommands (`watch`, `apply`, `iterate`) for overseeing the APIs.
-The worked example produces 3 findings across Layers 1, 2, 3 against a synthetic 200-call trace cohort, including a Layer 1 self-correction that pushes back on the cohort's watch question. 
-v1 ships with one named denominator-math limitation surfaced in the README and a v1.1 prompt fix already in tree.
+A pattern-finding tool for developer integrations against a third-party API. Reads a stream of API-call traces from a cohort of developer integrations, a watch question, and the product's artifacts, and produces structured findings about where integrations get stuck, and what developers are/aren't using properly.
+Three subcommands (`watch`, `apply`, `iterate`) for analyzing trace patterns and proposing grounded fixes.
 
 ---
 
-## Workflow Artifacts
+## Pluma: an agent to fix developer products
 
 ### 🪠 [pluma](https://github.com/ivaylogb/pluma)
 
@@ -78,7 +84,7 @@ with a cross-tool report that surfaces findings appearing in ≥2
 tools against the same product. Build for analyzing funnel data and trace point data on agen platforms.
 
 ---
-## Personal Products
+## Building Fun Ideas
 
 ---
 
