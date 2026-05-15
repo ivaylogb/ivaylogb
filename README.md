@@ -65,9 +65,9 @@ Three subcommands `diagnose`, `apply`, `iterate` help the agent refine itself in
 Uses the abstractions from `agent-engineering`. The worked example in `examples/issue_107/` runs the full flow against reference_agent's routing eval, including a comparison run where one hypothesis (Layer 3 framing) was confirmed by the eval and another (Layer 1 framing) was falsified.
 
 ### 📉 [funnel-researcher](https://github.com/ivaylogb/funnel-researcher)
-A failure-diagnosis tool for developer-API activation funnels. Reads the funnel definition, dropoff data, and the product's artifacts (docs, SDK, error catalog), produces 2-3 structured hypotheses about why developers drop off at a target step, with `file:line` evidence and applyable structured edit specs. Built for growth/PLG PMs running developer-facing API products and agent platforms.
+A failure-diagnosis tool for developer-API activation funnels. Reads the funnel definition, dropoff data, and the product's artifacts (docs, SDK, error catalog), produces 2-3 structured hypotheses about why developers drop off at a target step, with `file:line` evidence and applyable structured edit specs. Built for diagnosing developer APIs.
 Three subcommands (`diagnose`, `apply`, `iterate`) give out-of-the-box functionality for drilling into a hypothesis and iterate. 
-Same methodology as agent-researcher. The worked example diagnoses a fictional agentic-API product against a realistic dropoff cohort.
+Same methodology as agent-researcher. The worked example diagnoses a sample API surface against a realistic dropoff cohort.
 
 ### 📡 [integration-watcher](https://github.com/ivaylogb/integration-watcher)
 A pattern-finding tool for developer integrations against a third-party API. Reads a stream of API-call traces from a cohort of developer integrations, a watch question, and the product's artifacts, and produces structured findings about where integrations get stuck, and what developers are/aren't using properly.
@@ -81,7 +81,7 @@ Three subcommands (`watch`, `apply`, `iterate`) for analyzing trace patterns and
 
 The agent for fixing developer-product leaks. One CLI over agent-researcher, funnel-researcher, and integration-watcher, 
 with a cross-tool report that surfaces findings appearing in ≥2 
-tools against the same product. Build for analyzing funnel data and trace point data on agen platforms.
+tools against the same product. Built for analyzing funnel data and trace data on agent platforms.
 
 ---
 ## Building Fun Ideas
