@@ -69,12 +69,11 @@ v1 ships with one named denominator-math limitation surfaced in the README and a
 
 ---
 
-## Pluma
+## Workflow Artifacts
 
 ### 🪠 [pluma](https://github.com/ivaylogb/pluma)
 
-The agent for fixing developer-product leaks. One CLI over 
-agent-researcher, funnel-researcher, and integration-watcher, 
+The agent for fixing developer-product leaks. One CLI over agent-researcher, funnel-researcher, and integration-watcher, 
 with a cross-tool report that surfaces findings appearing in ≥2 
 tools against the same product. Build for analyzing funnel data and trace point data on agen platforms.
 
