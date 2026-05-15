@@ -60,9 +60,8 @@ Agent diagnosis tools and verifications using custom primitives.
 
 ### 🔬 [agent-researcher](https://github.com/ivaylogb/agent-researcher)
 A failure-diagnosis agent for other agents. When a target agent fails an eval, this reads the failing scenario and the target agent's source, produces a small set of structured hypotheses categorized against the four-layer model, applies one mechanically, and re-runs the eval to measure the delta. 
-Closed-loop system to get to a specific outcome from a starting point. 
-Three subcommands `diagnose`, `apply`, `iterate` help the agent refine itself in a structured, systematic way.
-Uses the abstractions from `agent-engineering`. The worked example in `examples/issue_107/` runs the full flow against reference_agent's routing eval, including a comparison run where one hypothesis (Layer 3 framing) was confirmed by the eval and another (Layer 1 framing) was falsified.
+The idea here is to form a closed-loop system to get to a specific outcome from a starting point. Three subcommands `diagnose`, `apply`, `iterate` help the agent refine itself in a structured, systematic way.
+Uses the abstractions from `agent-engineering`. Basic working example in `examples/issue_107/` runs the full flow against reference_agent's routing eval, including a comparison run where one hypothesis (Layer 3 framing) was confirmed by the eval and another (Layer 1 framing) was falsified.
 
 ### 📉 [funnel-researcher](https://github.com/ivaylogb/funnel-researcher)
 A failure-diagnosis tool for developer-API activation funnels. Reads the funnel definition, dropoff data, and the product's artifacts (docs, SDK, error catalog), produces 2-3 structured hypotheses about why developers drop off at a target step, with `file:line` evidence and applyable structured edit specs. Built for diagnosing developer APIs.
@@ -80,8 +79,8 @@ Three subcommands (`watch`, `apply`, `iterate`) for analyzing trace patterns and
 ### 🪠 [pluma](https://github.com/ivaylogb/pluma)
 
 The agent for fixing developer-product leaks. One CLI over agent-researcher, funnel-researcher, and integration-watcher, 
-with a cross-tool report that surfaces findings appearing in ≥2 
-tools against the same product. Built for analyzing funnel data and trace data on agent platforms.
+with a cross-tool report that surfaces findings appearing in ≥2  tools against the same product. 
+Built for analyzing funnel data and trace data on agent platforms. Work in progress.
 
 ---
 ## Building Fun Ideas
