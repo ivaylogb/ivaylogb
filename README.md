@@ -1,8 +1,8 @@
-# Ivaylo Bahtchevanov
+# Ivaylo Bahtchevanov 
 
----
 This page is where I keep the things I'm building on the side for fun. It includes agent tools that have been useful for me in the past, engineering primitives, and fun product ideas I'm willing to make public. 
----
+
+
 ## Agent engineering kit
 
 The goal here is to make it easy to build and deploy production-grade agents through ease of management of context, tools, evals, and skills.  
@@ -76,15 +76,15 @@ Each imperfection produces a specific signal in the synthetic dropoff data that 
 ---
 
 ### 🏠 Real Estate
-[costseg-pro](https://costsegnow.vercel.app/)
+####[costseg-pro](https://costsegnow.vercel.app/)
 A cost-segregation tool for real estate investors, built end-to-end on Vite, React, and Vercel. Started as an excuse to dabble more in real estate, now used by a handful of active investors.
 
 ### 📈 Portfolio Optimization and Research Assistant
-[Portfolio-manager-and-researcher](https://github.com/ivaylogb/personal-portfolio-manager-and-researcher)
+####[Portfolio-manager-and-researcher](https://github.com/ivaylogb/personal-portfolio-manager-and-researcher)
 Personal portfolio monitoring + AI-assisted equity research framework. Daily briefs, SEC alerts, user-defined rules engine, methodology skills for thesis exploration. Not financial advice.
 
 ### 🕊️ Spiritualism
-[Selah](https://sela-blond.vercel.app/)
+####[Selah](https://sela-blond.vercel.app/)
 Philosophical and spiritual meditative partner.
 
 ---
