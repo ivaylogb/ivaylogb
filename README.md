@@ -52,16 +52,20 @@ Methodology and Claude Code skills for shipping production-grade agents. Referen
 
 ### 🔬 [agent-researcher](https://github.com/ivaylogb/agent-researcher)
 A failure-diagnosis agent for other agents. When a target agent fails an eval, this reads the failing scenario and the target agent's source, produces a small set of structured hypotheses categorized against the four-layer model, applies one mechanically, and re-runs the eval to measure the delta. 
-Closed-loop system to get to a specific outcome from a starting point. Three subcommands `diagnose`, `apply`, `iterate` help the agent refine itself in a structured, systematic way.
+Closed-loop system to get to a specific outcome from a starting point. 
+Three subcommands `diagnose`, `apply`, `iterate` help the agent refine itself in a structured, systematic way.
 Uses the abstractions from `agent-engineering`. The worked example in `examples/issue_107/` runs the full flow against reference_agent's routing eval, including a comparison run where one hypothesis (Layer 3 framing) was confirmed by the eval and another (Layer 1 framing) was falsified.
 
 ### 📉 [funnel-researcher](https://github.com/ivaylogb/funnel-researcher)
 A failure-diagnosis tool for developer-API activation funnels. Reads the funnel definition, dropoff data, and the product's artifacts (docs, SDK, error catalog), produces 2-3 structured hypotheses about why developers drop off at a target step, with `file:line` evidence and applyable structured edit specs. Built for growth/PLG PMs running developer-facing API products and agent platforms.
-Three subcommands (`diagnose`, `apply`, `iterate`) give out-of-the-box functionality for drilling into a hypothesis and iterate. Same methodology as agent-researcher. The worked example diagnoses a fictional agentic-API product against a realistic dropoff cohort.
+Three subcommands (`diagnose`, `apply`, `iterate`) give out-of-the-box functionality for drilling into a hypothesis and iterate. 
+Same methodology as agent-researcher. The worked example diagnoses a fictional agentic-API product against a realistic dropoff cohort.
 
 ### 📡 [integration-watcher](https://github.com/ivaylogb/integration-watcher)
-A pattern-finding tool for developer integrations against a third-party API. Reads a stream of API-call traces from a cohort of developer integrations, a watch question, and the product's artifacts, produces structured findings about where integrations get stuck, what developers aren't using, and what they're using wrong — with `file:line` evidence into the product and `developer_id` + call-sequence references into the traces. For the moment after activation works and the question shifts from "why aren't developers getting started" to "why aren't the developers who got started going further."
-Three subcommands — `watch`, `apply`, `iterate` — same three-stage shape as the sister tools. The worked example produces 3 findings across Layers 1, 2, 3 against a synthetic 200-call trace cohort, including a Layer 1 self-correction that pushes back on the cohort's watch question. v1 ships with one named denominator-math limitation surfaced in the README and a v1.1 prompt fix already in tree.
+A pattern-finding tool for developer integrations against a third-party API.  a stream of API-call traces from a cohort of developer integrations, a watch question, and the product's artifacts, produces structured findings about where integrations get stuck, what developers aren't using, and what they're using wrong. 
+Three subcommands (`watch`, `apply`, `iterate`) for overseeing the APIs.
+The worked example produces 3 findings across Layers 1, 2, 3 against a synthetic 200-call trace cohort, including a Layer 1 self-correction that pushes back on the cohort's watch question. 
+v1 ships with one named denominator-math limitation surfaced in the README and a v1.1 prompt fix already in tree.
 
 ---
 
