@@ -4,7 +4,7 @@ This page is where I keep the things I'm building on the side. It includes agent
 
 ## Agent engineering kit
 
-The goal here is to make it easy to build and deploy production-grade agents through ease of management of context, tools, evals, and skills.  
+The goal here is to make it easy to build and deploy production-grade agents through ease of management of context, tools, evals, and skills. When an LLM-medited system fails, the diagnosis itself should be a typed, verifiable artifact exposed through abstractions, built on these primitives. 
 
 <p><strong><a href="https://github.com/ivaylogb/agent-engineering">agent-engineering</a></strong><br>
 
