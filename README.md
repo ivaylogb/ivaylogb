@@ -69,14 +69,14 @@ v1 ships with one named denominator-math limitation surfaced in the README and a
 
 ---
 
+## Pluma
 
-## Worked artifacts
+### 🪠 [pluma](https://github.com/ivaylogb/pluma)
 
-### 🧪 [Pluma — fictional agentic-API platform](https://github.com/ivaylogb/funnel-researcher/tree/main/fixtures/pluma_api)
-
-A fictional agentic-API product I built as a teaching artifact for funnel-researcher. Pluma is deliberately imperfect in five specific ways: agent_id setup buried in a separate doc from quickstart, error messages that name the problem without the fix path, an SDK `run()` signature that hides a precondition, a README quickstart that reads as linear when agent creation is a branch, and a scoped-keys concept introduced only in the error catalog.
-
-Each imperfection produces a specific signal in the synthetic dropoff data that funnel-researcher's `diagnose` is built to catch. Same pattern as `reference_agent` for agent-researcher — a known-broken target whose failure modes are the methodology's worked example.
+The agent for fixing developer-product leaks. One CLI over 
+agent-researcher, funnel-researcher, and integration-watcher, 
+with a cross-tool report that surfaces findings appearing in ≥2 
+tools against the same product. Build for analyzing funnel data and trace point data on agen platforms.
 
 ---
 ## Personal Products
