@@ -2,9 +2,12 @@
 
 This page is where I keep the things I'm building on the side. It includes agent tools that have been useful for me in the past, engineering primitives, agent engineering methodology, diagnostic tools, and fun product ideas and musings.
 
+Production-engineering for LLM-mediated systems has two pieces of work - (1) Agent Engineering Kit focused on context, tools, eval, skills methodology and reusable patterns, (2) diagnosing them when they don't work (three reference tools, an orchestrator, and a spec
+to make LLM-failure analysis typed, falsifiable, with findings that are easy to operationalize.
+
 ## Agent engineering kit
 
-The goal here is to make it easy to build and deploy production-grade agents through ease of management of context, tools, evals, and skills. When an LLM-medited system fails, the diagnosis itself should be a typed, verifiable artifact exposed through abstractions, built on these primitives. 
+The goal here is to make it easy to build and deploy production-grade agents through ease of management of context, tools, evals, and skills. 
 
 <p><strong><a href="https://github.com/ivaylogb/agent-engineering">agent-engineering</a></strong><br>
 
@@ -47,20 +50,26 @@ Methodology and Claude Code skills for shipping production-grade agents. Referen
 
 ---
 
-## Diagnostic spec
+## Agent Failure Diagnosis
+
+A discipline + toolkit for turning LLM failure-analysis into typed, falsifiable artifacts.
+When an LLM-medited system fails (an agent flunking an eval, developers dropping off an API funnel, integrations getting stuck mid-cohort), the diagnosis itself should be a typed, verifiable artifact exposed through abstractions. 
+
+Every Finding lives in exactly one of four causal layers (measurement instrument / interface / context at decision time / sequence), carries verifiable evidence (file:line, trace, eval, data, or virtual artifact). 
+Current implementation will either ship a byte-exact edit specification or honestly declares the fix isn't an in-place edit. 
 
 ### 📐 [agent-diagnosis-spec](https://github.com/ivaylogb/agent-diagnosis-spec)
 
 Agent diagnosis tools and verifications using custom primitives. 
 
-
 ---
 
-## Built on the kit
+## Primary Tools for Diagnosis and Analysis
 
 ### 🔬 [agent-researcher](https://github.com/ivaylogb/agent-researcher)
-A failure-diagnosis agent for other agents. When a target agent fails an eval, this reads the failing scenario and the target agent's source, produces a small set of structured hypotheses categorized against the four-layer model, applies one mechanically, and re-runs the eval to measure the delta. 
-The idea here is to form a closed-loop system to get to a specific outcome from a starting point. Three subcommands `diagnose`, `apply`, `iterate` help the agent refine itself in a structured, systematic way.
+A failure-diagnosis agent for other agents. 
+When a target agent fails an eval, this reads the failing scenario and the target agent's source, produces a small set of structured hypotheses categorized against the four-layer model, applies one mechanically, and re-runs the eval to measure the delta. 
+This agent runs a closed-loop system to get to a specific outcome from a starting point. It uses three subcommands `diagnose`, `apply`, `iterate` to refine itself.
 Uses the abstractions from `agent-engineering`. Basic working example in `examples/issue_107/` runs the full flow against reference_agent's routing eval, including a comparison run where one hypothesis (Layer 3 framing) was confirmed by the eval and another (Layer 1 framing) was falsified.
 
 ### 📉 [funnel-researcher](https://github.com/ivaylogb/funnel-researcher)
@@ -74,12 +83,12 @@ Three subcommands (`watch`, `apply`, `iterate`) for analyzing trace patterns and
 
 ---
 
-## Pluma: an agent to fix developer products
+## Pluma: an agent orchestrator to fix developer products
 
 ### 🪠 [pluma](https://github.com/ivaylogb/pluma)
 
 The agent for fixing developer-product leaks. One CLI over agent-researcher, funnel-researcher, and integration-watcher, 
-with a cross-tool report that surfaces findings appearing in ≥2  tools against the same product. 
+with a cross-tool report that surfaces findings appearing in ≥2 tools against the same product. 
 Built for analyzing funnel data and trace data on agent platforms. Work in progress.
 
 ---
