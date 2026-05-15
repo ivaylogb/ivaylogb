@@ -75,16 +75,13 @@ Each imperfection produces a specific signal in the synthetic dropoff data that 
 
 ---
 
-### 🏠 Real Estate
-####[costseg-pro](https://costsegnow.vercel.app/)
+### 🏠 Real Estate - [costseg-pro](https://costsegnow.vercel.app/)
 A cost-segregation tool for real estate investors, built end-to-end on Vite, React, and Vercel. Started as an excuse to dabble more in real estate, now used by a handful of active investors.
 
-### 📈 Portfolio Optimization and Research Assistant
-####[Portfolio-manager-and-researcher](https://github.com/ivaylogb/personal-portfolio-manager-and-researcher)
+### 📈 Finance [Portfolio-manager-and-researcher](https://github.com/ivaylogb/personal-portfolio-manager-and-researcher)
 Personal portfolio monitoring + AI-assisted equity research framework. Daily briefs, SEC alerts, user-defined rules engine, methodology skills for thesis exploration. Not financial advice.
 
-### 🕊️ Spiritualism
-####[Selah](https://sela-blond.vercel.app/)
+### 🕊️ Spiritualism - [Selah](https://sela-blond.vercel.app/)
 Philosophical and spiritual meditative partner.
 
 ---
