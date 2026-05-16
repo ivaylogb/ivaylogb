@@ -5,22 +5,23 @@ This page is where I keep the things I'm building on the side. It includes agent
 **Blog:** [ivaylogb.github.io](https://ivaylogb.github.io) 
 
 ## The diagnostic stack
-Diagnostic infrastructure for LLM-mediated systems. Discipline + toolkit for turning LLM failure-analysis into typed, falsifiable, machine-applyable Findings. Three reference tools, an orchestrator, and a spec for analyzing/comparing. The tools read from Braintrust, LangSmith, PostHog, OpenTelemetry) and identify defects with proposed fixes.
+Diagnostic infrastructure for LLM-mediated systems. Tools for turning LLM failure-analysis into typed, falsifiable, machine-applyable Findings. Three reference tools, an orchestrator, and a spec for analyzing/comparing outputs read from Braintrust, LangSmith, PostHog, OpenTelemetry. 
+The goal is to identify where the defect is and propose a clean fix.
 
 ### 📐 [agent-diagnosis-spec](https://github.com/ivaylogb/agent-diagnosis-spec)
-The structural opinions that make the outputs trustworthy. JSON Schema for the Finding object, prose specification of the four-layer model, structured-edit format, five-variant evidence union, and the grounding principles. v0.1, with a conformance test suite that runs against the three reference implementations.
+The shared output format the tools below produce. A Finding has a claim, a file:line citation as evidence, a proposed edit, and a category (was the eval wrong, was the API interface wrong, was the documentation wrong at the moment of decision, or was the call sequence wrong). Includes a conformance test suite.
 
 ### 🔬 [agent-researcher](https://github.com/ivaylogb/agent-researcher)
-A failure-diagnosis agent for other agents. When a target agent fails an eval, this reads the failing scenario and the target agent's source, produces a small set of structured hypotheses categorized against the four-layer model, applies one mechanically, and re-runs the eval to measure the delta. Closed-loop system. Three subcommands `diagnose`, `apply`, `iterate` help the agent refine itself in a structured, systematic way. The worked example in `examples/issue_107/` runs the full flow against reference_agent's routing eval, including a comparison run where one hypothesis (Layer 3 framing) was confirmed by the eval and another (Layer 1 framing) was falsified.
+A failure-diagnosis agent for other agents. Reads a failing agent eval, looks at the agent's source, and writes 2-3 hypotheses for why the agent failed. For each one, it proposes an exact code edit and a verification step (apply the edit, re-run the eval, check whether the pass rate moved). 
 
 ### 📉 [funnel-researcher](https://github.com/ivaylogb/funnel-researcher)
-A failure-diagnosis tool for developer-API activation funnels. Reads the funnel definition, dropoff data, and the product's artifacts (docs, SDK, error catalog), produces 2-3 structured hypotheses about why developers drop off at a target step, with `file:line` evidence and applyable structured edit specs. Three subcommands (`diagnose`, `apply`, `iterate`) give out-of-the-box functionality for drilling into a hypothesis and iterating.
+A failure-diagnosis tool for developer-API activation funnels. Reads a developer-facing API's onboarding funnel: the step definitions, the dropoff numbers, the product's docs, artifacts, and SDK. Provides structured hypotheses on why developers fall off at a target step. Cites the specific file and line where the friction lives. Proposes edits. Out-of-the-box functionality for drilling into a hypothesis and iterating.
 
 ### 📡 [integration-watcher](https://github.com/ivaylogb/integration-watcher)
-A pattern-finding tool for developer integrations against a third-party API. Reads a stream of API-call traces from a cohort of developer integrations, a watch question, and the product's artifacts, and produces structured findings about where integrations get stuck and what developers are/aren't using properly. Three subcommands (`watch`, `apply`, `iterate`) for analyzing trace patterns and proposing grounded fixes.
+A pattern-finding tool for developer integrations against a third-party API. Reads a stream of API call traces from real developer integrations and finds patterns in how they're getting stuck. Identifies which behaviors recur across multiple integrations, cites where in the product surface the trigger lives, and proposes edits.
 
 ### 🪠 [pluma](https://github.com/ivaylogb/pluma)
-The orchestrator. One CLI over agent-researcher, funnel-researcher, and integration-watcher, with a cross-tool report that surfaces findings appearing in ≥2 tools against the same product. Houses the adapter and converters that bridge external platforms (PostHog, with more on the way) into the tools' input shapes. Worked examples include a Stripe Connect onboarding run in `examples/stripe/`.
+Runs the three tools above and finds where they agree. When the funnel tool and the trace tool independently point at the same file:line as the source of a defect, that's a stronger signal than either alone. Also houses the adapter layer that connects external platforms to the tools' inputs. Worked example against Stripe Connect onboarding lives in `examples/stripe/`.
 
 ---
 
