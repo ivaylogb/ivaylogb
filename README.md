@@ -1,5 +1,5 @@
 ## Ivaylo Bahtchevanov 
-
+**Blog:** [ivaylogb.github.io](https://ivaylogb.github.io)
 This page is where I keep the things I'm building on the side. It includes agent tools that have been useful for me in the past, engineering primitives, agent engineering methodology, diagnostic tools, and fun product ideas and musings.
 
 Production-engineering for LLM-mediated systems has two pieces of work: 
@@ -92,6 +92,12 @@ The agent for fixing developer-product leaks. One CLI over agent-researcher, fun
 with a cross-tool report that surfaces findings appearing in ≥2 tools against the same product. 
 Built for analyzing funnel data and trace data on agent platforms. Work in progress.
 
+A real-world worked example diagnosing Stripe Connect onboarding 
+lives at [pluma/examples/stripe](https://github.com/ivaylogb/pluma/tree/main/examples/stripe).
+
+A PostHog integration that converts event exports into trace 
+input is at [pluma/integrations/posthog](https://github.com/ivaylogb/pluma/tree/main/src/pluma/integrations/posthog).
+
 ---
 ## Building Fun Ideas
 
@@ -105,5 +111,8 @@ Personal portfolio monitoring + AI-assisted equity research framework. Daily bri
 
 ### 🕊️ Spiritualism - [Selah](https://sela-blond.vercel.app/)
 Philosophical and spiritual meditative partner.
+
+### 📝 Writing - [ivaylogb.github.io](https://ivaylogb.github.io)
+Notes on engineering tools and methodology for LLM-mediated systems.
 
 ---
